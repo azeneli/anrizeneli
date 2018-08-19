@@ -1,5 +1,8 @@
-var express = require('express');
-var port = process.env.PORT || 3000;
-var app = express();
-app.use(express.static(__dirname + ‘/public’));
-app.listen(port);
+// define the folder that will be used for static assets
+app.use(Express.static(path.join(__dirname, '../public')));
+
+// handle every other route with index.html, which will contain
+// a script tag to your application's JavaScript file(s).
+app.get('*', function (request, response){
+    response.sendFile(path.resolve(__dirname, '../public', 'index.html'));
+});
