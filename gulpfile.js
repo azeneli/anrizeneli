@@ -136,3 +136,11 @@ gulp.task('dev', ['css', 'js', 'browserSync'], function() {
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./*.html', browserSync.reload);
 });
+
+gulp.task('serveprod', function() {
+  connect.server({
+    root: 'https://anrizeneli.herokuapp.com/',
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
