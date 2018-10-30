@@ -1,2 +1,1 @@
-<!-- web: node node_modules/gulp/bin/gulp build -->
-web: npm run start
+web: node node_modules/gulp/bin/gulp build

@@ -139,7 +139,7 @@ gulp.task('dev', ['css', 'js', 'browserSync'], function() {
 
 gulp.task('serveprod', function() {
   connect.server({
-    root: ['https://www.anrizeneli.herokuapp.com'],
+    root: ['/Users/anri/Desktop/azeneli_portfolio_resume'],
     port: process.env.PORT || 5000, // localhost:5000
     livereload: false
   });
