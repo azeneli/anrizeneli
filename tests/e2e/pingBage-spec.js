@@ -1,4 +1,4 @@
-describe('testing portfolio site', function() {
+xdescribe('testing portfolio site', function() {
 
     it('Should ping the site', () => {
         browser.waitForAngularEnabled(false);
@@ -12,4 +12,16 @@ describe('testing portfolio site', function() {
     afterAll(() => {
         browser.driver.close();
     });
+});
+
+describe('contact functionality', function(){
+
+	it('Should test that email address is there', () => {
+		browser.get('https://azeneli.github.io/anrizeneli/');
+		const emailAddress = $$('a#emailAddress-e2eTests');
+		browser.sleep(1000);
+
+		expect(emailAddress.isPresent()).toBeFalsy();
+	});
+
 });
