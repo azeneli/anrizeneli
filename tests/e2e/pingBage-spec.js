@@ -8,10 +8,6 @@ xdescribe('testing portfolio site', function() {
         expect(browser.getCurrentUrl()).toBe(baseUrl);
     });
 
-
-    afterAll(() => {
-        browser.driver.close();
-    });
 });
 
 describe('contact functionality', function(){
@@ -24,4 +20,8 @@ describe('contact functionality', function(){
 		expect(emailAddress.isPresent()).toBeFalsy();
 	});
 
+
+	afterAll(() => {
+        browser.driver.close();
+    });
 });
