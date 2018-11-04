@@ -3,7 +3,6 @@ exports.config = {
   specs: ['tests/e2e/pingBage-spec.js'],
 
   onPrepare: function(){
-  	// Auto-Pilot is non-angular app
     browser.ignoreSynchronization = true;
 
     const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
