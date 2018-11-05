@@ -1,13 +1,11 @@
-xdescribe('testing portfolio site', function() {
+xdescribe('Site online functionality', function() {
 
     it('Should ping the site', () => {
-        browser.waitForAngularEnabled(false);
         browser.get('https://azeneli.github.io/anrizeneli/');
         const baseUrl = 'https://azeneli.github.io/anrizeneli/';
 
         expect(browser.getCurrentUrl()).toBe(baseUrl);
     });
-
 });
 
 describe('contact functionality', function(){
@@ -19,7 +17,6 @@ describe('contact functionality', function(){
 
 		expect(emailAddress.isPresent()).toBeFalsy();
 	});
-
 
 	afterAll(() => {
         browser.driver.close();
