@@ -21,7 +21,7 @@ exports.config = {
         		success: '✓ ',
     			failure: '✗ ',
     			pending: '* '
-    		}
+    		  }
         })
     );
 
