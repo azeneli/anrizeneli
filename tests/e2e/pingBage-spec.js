@@ -18,7 +18,17 @@ describe('contact functionality', function(){
 		expect(emailAddress.isPresent()).toBeFalsy();
 	});
 
+	it('Should test that the profile images exists', () => {
+		const profileImage = $$('img#profile-img');
+		
+		browser.sleep(1000);
+		expect(profileImage.isPresent()).toBeFalsy();
+	});
+
+	
+
 	afterAll(() => {
         browser.driver.close();
     });
 });
+
